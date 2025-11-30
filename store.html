@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>VIRGO | STORE</title>
+    <meta name="description" content="Cartzilla - Multipurpose Bootstrap E-Commerce HTML Template">
+    <meta name="keywords" content="online shop, e-commerce, online store, market, multipurpose, product landing, cart, checkout, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="Coderthemes">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/img/logo/logo.webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/img/logo/logo.webp">
+ 
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="assets/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/icons/cartzilla-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="assets/vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/simplebar/dist/simplebar.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/dist/css/glightbox.min.css">
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+       <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Shopping cart offcanvas (Empty state) -->
+<div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCartLabel" style="width: 500px">
+
+  <!-- Header -->
+  <div class="offcanvas-header flex-column align-items-start py-3 pt-lg-4">
+    <div class="d-flex align-items-center justify-content-between w-100 mb-3 mb-lg-4">
+      <h4 class="offcanvas-title" id="shoppingCartLabel">Your Cart</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <p class="fs-sm">Add <span class="text-dark-emphasis fw-semibold">₹1,200</span> more to get <span class="text-dark-emphasis fw-semibold">Free Delivery</span></p>
+    <div class="progress w-100" style="height: 4px">
+      <div class="progress-bar bg-warning rounded-pill" style="width: 60%"></div>
+    </div>
+  </div>
+
+  <!-- Items -->
+  <div class="offcanvas-body d-flex flex-column gap-4 pt-2">
+
+    <!-- Item -->
+    <div class="d-flex align-items-center">
+      <a class="flex-shrink-0" href="product-details.html">
+        <img src="assets/img/virgo/products/asin1.png" width="110" alt="Candle">
+      </a>
+      <div class="w-100 min-w-0 ps-2 ps-sm-3">
+        <h5 class="d-flex animate-underline mb-2">
+          <a class="d-block fs-sm fw-medium text-truncate animate-target" href="product-details.html">
+            Virgo Aromatic Soy Candle – Vanilla Bloom
+          </a>
+        </h5>
+        <div class="h6 pb-1 mb-2">₹899.00</div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="count-input rounded-2">
+            <button type="button" class="btn btn-icon btn-sm" data-decrement><i class="ci-minus"></i></button>
+            <input type="number" class="form-control form-control-sm" value="1" readonly>
+            <button type="button" class="btn btn-icon btn-sm" data-increment><i class="ci-plus"></i></button>
+          </div>
+          <button type="button" class="btn-close fs-sm" data-bs-title="Remove"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="d-flex align-items-center">
+      <a class="position-relative flex-shrink-0" href="#">
+        <span class="badge text-bg-danger position-absolute top-0 start-0">-15%</span>
+        <img src="assets/img/virgo/products/asin2.png" width="110" alt="Reed Diffuser">
+      </a>
+      <div class="w-100 min-w-0 ps-2 ps-sm-3">
+        <h5 class="d-flex animate-underline mb-2">
+          <a class="d-block fs-sm fw-medium text-truncate animate-target" href="product-details.html">
+            Virgo Luxury Reed Diffuser – Fresh Linen
+          </a>
+        </h5>
+        <div class="h6 pb-1 mb-2">₹1,099.00 <del class="text-body-tertiary fs-xs fw-normal">₹1,299.00</del></div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="count-input rounded-2">
+            <button type="button" class="btn btn-icon btn-sm" data-decrement><i class="ci-minus"></i></button>
+            <input type="number" class="form-control form-control-sm" value="1" readonly>
+            <button type="button" class="btn btn-icon btn-sm" data-increment><i class="ci-plus"></i></button>
+          </div>
+          <button type="button" class="btn-close fs-sm" data-bs-title="Remove"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="d-flex align-items-center">
+      <a class="flex-shrink-0" href="product-details.html">
+        <img src="assets/img/virgo/products/asin3.png" width="110" alt="Wax Melt Pack">
+      </a>
+      <div class="w-100 min-w-0 ps-2 ps-sm-3">
+        <h5 class="d-flex animate-underline mb-2">
+          <a class="d-block fs-sm fw-medium text-truncate animate-target" href="product-details.html">
+            Virgo Wax Melt Pack – Rose Garden
+          </a>
+        </h5>
+        <div class="h6 pb-1 mb-2">₹499.00</div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="count-input rounded-2">
+            <button type="button" class="btn btn-icon btn-sm" data-decrement><i class="ci-minus"></i></button>
+            <input type="number" class="form-control form-control-sm" value="1" readonly>
+            <button type="button" class="btn btn-icon btn-sm" data-increment><i class="ci-plus"></i></button>
+          </div>
+          <button type="button" class="btn-close fs-sm" data-bs-title="Remove"></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="offcanvas-header flex-column align-items-start">
+    <div class="d-flex align-items-center justify-content-between w-100 mb-3 mb-md-4">
+      <span class="text-light-emphasis">Subtotal:</span>
+      <span class="h6 mb-0">₹2,497.00</span>
+    </div>
+    <div class="d-flex w-100 gap-3">
+      <a class="btn btn-lg btn-secondary w-100" href="cart-cart.html">View Cart</a>
+      <a class="btn btn-lg btn-dark w-100" href="checkout.html">Checkout</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+    <!-- Shop filters offcanvas -->
+    <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shopFilters" tabindex="-1" aria-labelledby="shopFiltersLabel">
+
+      <!-- Header -->
+      <div class="offcanvas-header py-3">
+        <h5 class="offcanvas-title" id="shopFiltersLabel">Filter and sort</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="offcanvas-body pt-0">
+
+        <!-- Sort by -->
+<select class="form-select form-select-lg form-select-flush text-body-emphasis fw-medium py-3 px-0"
+  id="fil"
+  data-select='{
+    "classNames": {
+      "containerInner": ["form-select", "form-select-lg", "form-select-flush", "text-body-emphasis", "fw-medium", "py-3", "px-0"]
+    }
+  }'
+  aria-label="Sorting">
+
+  <option value="">Sort by</option>
+  <option value="featured" selected>Featured</option>
+  <option value="bestselling">Best Selling</option>
+  <option value="new">New Arrivals</option>
+  <option value="low-to-high">Price: Low to High</option>
+  <option value="high-to-low">Price: High to Low</option>
+  <option value="top-rated">Top Rated</option>
+</select>
+
+
+    <div class="accordion" id="filters">
+
+  <!-- Category filter -->
+  <div class="accordion-item">
+    <h6 class="accordion-header" id="headingCategory">
+      <button type="button" class="accordion-button fw-medium collapsed" data-bs-toggle="collapse"
+        data-bs-target="#categoryFilter" aria-expanded="false" aria-controls="categoryFilter">
+        <span class="d-flex align-items-end">
+          Category
+          <span class="text-body fs-sm fw-normal ms-1" id="categoryCount-2"></span>
+        </span>
+      </button>
+    </h6>
+    <div class="accordion-collapse collapse" id="categoryFilter" aria-labelledby="headingCategory"
+      data-bs-parent="#filters">
+      <div class="accordion-body d-flex flex-column gap-2 px-1">
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="scented-candles" checked
+            onclick="updateFilterCount('categoryCount-2')" data-count-id="categoryCount-2">
+          <label for="scented-candles" class="form-check-label d-flex align-items-end">
+            Scented Candles
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">212</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="wax-melts"
+            onclick="updateFilterCount('categoryCount-2')" data-count-id="categoryCount-2">
+          <label for="wax-melts" class="form-check-label d-flex align-items-end">
+            Wax Melts
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">154</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="diffusers"
+            onclick="updateFilterCount('categoryCount-2')" data-count-id="categoryCount-2">
+          <label for="diffusers" class="form-check-label d-flex align-items-end">
+            Reed Diffusers
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">98</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="decor-items"
+            onclick="updateFilterCount('categoryCount-2')" data-count-id="categoryCount-2">
+          <label for="decor-items" class="form-check-label d-flex align-items-end">
+            Home Décor
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">135</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="accessories" checked
+            onclick="updateFilterCount('categoryCount-2')" data-count-id="categoryCount-2">
+          <label for="accessories" class="form-check-label d-flex align-items-end">
+            Accessories
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">87</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Type filter -->
+  <div class="accordion-item">
+    <h6 class="accordion-header" id="headingType">
+      <button type="button" class="accordion-button fw-medium collapsed" data-bs-toggle="collapse"
+        data-bs-target="#typeFilter" aria-expanded="false" aria-controls="typeFilter">
+        <span class="d-flex align-items-end">
+          Type
+          <span class="text-body fs-sm fw-normal ms-1" id="typeCount-2"></span>
+        </span>
+      </button>
+    </h6>
+    <div class="accordion-collapse collapse" id="typeFilter" aria-labelledby="headingType" data-bs-parent="#filters">
+      <div class="accordion-body d-flex flex-column gap-2 px-1">
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="jar-candle"
+            onclick="updateFilterCount('typeCount-2')" data-count-id="typeCount-2">
+          <label for="jar-candle" class="form-check-label d-flex align-items-end">
+            Jar Candles
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">102</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="pillar-candle"
+            onclick="updateFilterCount('typeCount-2')" data-count-id="typeCount-2">
+          <label for="pillar-candle" class="form-check-label d-flex align-items-end">
+            Pillar Candles
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">87</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="tea-light"
+            onclick="updateFilterCount('typeCount-2')" data-count-id="typeCount-2">
+          <label for="tea-light" class="form-check-label d-flex align-items-end">
+            Tea Lights
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">65</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="aroma-oil"
+            onclick="updateFilterCount('typeCount-2')" data-count-id="typeCount-2">
+          <label for="aroma-oil" class="form-check-label d-flex align-items-end">
+            Aroma Oils
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">74</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="candle-holder"
+            onclick="updateFilterCount('typeCount-2')" data-count-id="typeCount-2">
+          <label for="candle-holder" class="form-check-label d-flex align-items-end">
+            Candle Holders
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">121</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Color filter -->
+  <div class="accordion-item">
+    <h6 class="accordion-header" id="headingColor">
+      <button type="button" class="accordion-button fw-medium collapsed" data-bs-toggle="collapse"
+        data-bs-target="#colorFilter" aria-expanded="false" aria-controls="colorFilter">
+        <span class="d-flex align-items-end">
+          Color
+          <span class="text-body fs-sm fw-normal ms-1" id="colorCount-2"></span>
+        </span>
+      </button>
+    </h6>
+    <div class="accordion-collapse collapse" id="colorFilter" aria-labelledby="headingColor" data-bs-parent="#filters">
+      <div class="accordion-body d-flex flex-column gap-2 px-1">
+
+        <!-- Soft pastel Virgo colors -->
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="vanilla"
+            onclick="updateFilterCount('colorCount-2')" data-count-id="colorCount-2">
+          <label for="vanilla" class="form-check-label d-flex align-items-end">
+            <span class="align-self-center rounded-circle border border-2 p-1 me-2"
+              style="--cz-border-color: #f3e9d7; background-color: #f3e9d7"></span>
+            Vanilla
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">143</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="rose"
+            onclick="updateFilterCount('colorCount-2')" data-count-id="colorCount-2">
+          <label for="rose" class="form-check-label d-flex align-items-end">
+            <span class="align-self-center rounded-circle border border-2 p-1 me-2"
+              style="--cz-border-color: #f6d1d6; background-color: #f6d1d6"></span>
+            Rose Pink
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">97</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="lavender"
+            onclick="updateFilterCount('colorCount-2')" data-count-id="colorCount-2">
+          <label for="lavender" class="form-check-label d-flex align-items-end">
+            <span class="align-self-center rounded-circle border border-2 p-1 me-2"
+              style="--cz-border-color: #d7ccf5; background-color: #d7ccf5"></span>
+            Lavender
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">112</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="white"
+            onclick="updateFilterCount('colorCount-2')" data-count-id="colorCount-2">
+          <label for="white" class="form-check-label d-flex align-items-end">
+            <span class="align-self-center rounded-circle border border-2 p-1 me-2"
+              style="--cz-border-color: #ffffff; background-color: #ffffff"></span>
+            White
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">203</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="amber"
+            onclick="updateFilterCount('colorCount-2')" data-count-id="colorCount-2">
+          <label for="amber" class="form-check-label d-flex align-items-end">
+            <span class="align-self-center rounded-circle border border-2 p-1 me-2"
+              style="--cz-border-color: #d8a46b; background-color: #d8a46b"></span>
+            Amber
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">88</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Price filter -->
+  <div class="accordion-item">
+    <h6 class="accordion-header" id="headingPrice">
+      <button type="button" class="accordion-button fw-medium collapsed" data-bs-toggle="collapse"
+        data-bs-target="#priceFilter" aria-expanded="false" aria-controls="priceFilter">
+        <span class="d-flex align-items-end">
+          Price
+          <span class="text-body fs-sm fw-normal ms-1" id="priceCount"></span>
+        </span>
+      </button>
+    </h6>
+    <div class="accordion-collapse collapse" id="priceFilter" aria-labelledby="headingPrice"
+      data-bs-parent="#filters">
+      <div class="accordion-body d-flex flex-column gap-2 px-1">
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="p1" onclick="updateFilterCount('priceCount')"
+            data-count-id="priceCount">
+          <label for="p1" class="form-check-label d-flex align-items-end">
+            ₹199 – ₹399
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">132</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="p2" onclick="updateFilterCount('priceCount')"
+            data-count-id="priceCount">
+          <label for="p2" class="form-check-label d-flex align-items-end">
+            ₹400 – ₹699
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">191</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="p3" onclick="updateFilterCount('priceCount')"
+            data-count-id="priceCount">
+          <label for="p3" class="form-check-label d-flex align-items-end">
+            ₹700 – ₹999
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">153</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="p4" onclick="updateFilterCount('priceCount')"
+            data-count-id="priceCount">
+          <label for="p4" class="form-check-label d-flex align-items-end">
+            ₹1000+
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">89</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Material filter -->
+  <div class="accordion-item">
+    <h6 class="accordion-header" id="headingMaterial">
+      <button type="button" class="accordion-button fw-medium collapsed" data-bs-toggle="collapse"
+        data-bs-target="#materialFilter" aria-expanded="false" aria-controls="materialFilter">
+        <span class="d-flex align-items-end">
+          Material
+          <span class="text-body fs-sm fw-normal ms-1" id="materialCount"></span>
+        </span>
+      </button>
+    </h6>
+    <div class="accordion-collapse collapse" id="materialFilter" aria-labelledby="headingMaterial"
+      data-bs-parent="#filters">
+      <div class="accordion-body d-flex flex-column gap-2 px-1">
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="soy-wax"
+            onclick="updateFilterCount('materialCount')" data-count-id="materialCount">
+          <label for="soy-wax" class="form-check-label d-flex align-items-end">
+            Soy Wax
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">134</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="paraffin-wax"
+            onclick="updateFilterCount('materialCount')" data-count-id="materialCount">
+          <label for="paraffin-wax" class="form-check-label d-flex align-items-end">
+            Paraffin Wax
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">98</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="glass-jar"
+            onclick="updateFilterCount('materialCount')" data-count-id="materialCount">
+          <label for="glass-jar" class="form-check-label d-flex align-items-end">
+            Glass Jar
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">176</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="ceramic"
+            onclick="updateFilterCount('materialCount')" data-count-id="materialCount">
+          <label for="ceramic" class="form-check-label d-flex align-items-end">
+            Ceramic
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">67</span>
+          </label>
+        </div>
+
+        <div class="form-check m-0">
+          <input type="checkbox" class="form-check-input fs-base" id="wooden-lid"
+            onclick="updateFilterCount('materialCount')" data-count-id="materialCount">
+          <label for="wooden-lid" class="form-check-label d-flex align-items-end">
+            Wooden Lid
+            <span class="fs-xs text-body-secondary ps-2 ms-auto">42</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+
+    <!-- Topbar -->
+     <div class="container position-relative d-flex justify-content-between z-1 py-3">
+      <div class="nav animate-underline">
+        <span class="text-secondary-emphasis fs-xs me-1">Contact us <span class="d-none d-sm-inline">24/7</span></span>
+        <a class="nav-link animate-target fs-xs fw-semibold p-0" href="tel:+15053753082">+91&nbsp;91&nbsp;0867&nbsp;35&nbsp;99</a>
+      </div>
+      <div class="sale-banner-slider d-none d-md-inline position-relative overflow-hidden" style="width: 240px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🔥 The Biggest Sale Ever 50% Off</a>
+          </div>
+          <div class="swiper-slide">
+            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🎉 New Arrivals - Get 30% Off Today</a>
+          </div>
+          <div class="swiper-slide">
+            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">✨ Flash Sale - Limited Time Only</a>
+          </div>
+        </div>
+      </div>
+      <ul class="nav gap-4">
+        <li class="animate-underline">
+          <a class="nav-link animate-target fs-xs p-0" href="wishlist.html">Wishlist</a>
+        </li>
+        <li class="animate-underline">
+          <a class="nav-link animate-target  fs-xs p-0" href="account.html">Account</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
+
+        <!-- Mobile offcanvas menu toggler (Hamburger) -->
+        <button type="button" class="navbar-toggler ms-3" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand position-relative z-1 ms-4 ms-sm-5 ms-lg-4 me-2 me-sm-0 me-lg-3" href="index.html"><img class="navbar-logo" src="assets/img/logo/logo.webp" alt=""></a>
+
+        <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <a href="index.html" class="offcanvas-title" id="navbarNavLabel"><img class="mobile-logo" src="assets/img/logo/logo.webp" alt=""></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link  fs-sm " aria-current="page" href="index.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+           
+              </li>
+       <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
+  <a class="nav-link dropdown-toggle fs-sm active" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Store</a>
+
+  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
+    <div class="d-flex flex-column flex-lg-row gap-4">
+
+      <!-- Column 1 -->
+      <div style="min-width: 190px">
+        <div class="h6 mb-2">Scented Candles</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Floral Scents</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Fruity Scents</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Woody & Earthy</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Fresh & Clean</a>
+          </li>
+        </ul>
+
+        <div class="h6 pt-4 mb-2">Aromatherapy Candles</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Stress Relief</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Sleep & Relaxation</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div style="min-width: 190px">
+        <div class="h6 mb-2">Jar Candles</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Small Jar</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Medium Jar</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Large Jar</a>
+          </li>
+        </ul>
+
+        <div class="h6 pt-4 mb-2">Decorative Candles</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Pillar Candles</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Floating Candles</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Shaped Candles</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div style="min-width: 190px">
+        <div class="h6 mb-2">Candle Accessories</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Candle Holders</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Wick Trimmers</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Snuffers & Tools</a>
+          </li>
+        </ul>
+
+        <div class="h6 pt-4 mb-2">Gift Sets</div>
+        <ul class="nav flex-column gap-2 mt-0">
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Mini Candle Sets</a>
+          </li>
+          <li class="d-flex w-100 pt-1">
+            <a class="nav-link animate-underline animate-target d-inline fw-normal p-0" href="store.html">Premium Gift Boxes</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</li>
+    <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link  fs-sm " aria-current="page" href="about.html" role="button"  data-bs-trigger="hover" aria-expanded="false">About Us</a>
+           
+              </li>
+                   <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link  fs-sm " aria-current="page" href="blogs.html" role="button"  data-bs-trigger="hover" aria-expanded="false">Blogs</a>
+           
+              </li>
+                 <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link  fs-sm " aria-current="page" href="contact.html" role="button"  data-bs-trigger="hover" aria-expanded="false">Contact Us</a>
+           
+              </li>
+             
+
+             
+          
+        
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Button group -->
+        <div class="d-flex gap-sm-1 position-relative z-1">
+
+
+        
+
+          <!-- Cart button -->
+          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+            <i class="ci-shopping-cart animate-target"></i>
+          </button>
+
+          <!-- Search -->
+          <div class="dropdown">
+            <button type="button" class="btn btn-icon fs-lg btn-secondary rounded-circle animate-scale" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Toggle search bar">
+              <i class="ci-search animate-target"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-3" style="--cz-dropdown-min-width: 20rem; --cz-dropdown-spacer: 1rem">
+              <form class="position-relative">
+                <input type="search" class="form-control rounded-pill" placeholder="Search..." data-autofocus="dropdown">
+                <button type="submit" class="btn btn-icon btn-sm fs-lg btn-secondary rounded-circle position-absolute top-0 end-0 mt-1 me-1" aria-label="Search">
+                  <i class="ci-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+      <div class="container pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5">
+
+        <!-- Breadcrumb -->
+        <nav class="position-relative pt-3 my-3 my-md-4" aria-label="breadcrumb" style="z-index: 1021">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home-index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Store</li>
+          </ol>
+        </nav>
+
+
+        <!-- Page title -->
+        <h1 class="h3 position-relative pb-sm-2 pb-md-3" style="z-index: 1021">Store</h1>
+
+
+        <!-- Filters -->
+        <div class="sticky-top bg-body mb-3 mb-sm-4" style="margin-top: -4.5rem">
+          <div style="justify-content: end!important;" class="row align-items-center  pt-5">
+        
+
+            <!-- Product / room view switcher -->
+            <div class="col-12 col-sm-4 col-md-3">
+              <ul class="nav nav-underline flex-nowrap justify-content-end" id="viewShwitcher">
+                  <nav class="nav">
+                <a class="nav-link animate-underline  px-2" href="#shopFilters" data-bs-toggle="offcanvas" aria-controls="shopFilters">
+                  <i class="ci-filter me-1"></i>
+                  <span class="animate-target text-nowrap">All filters</span>
+                </a>
+              </nav>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Selected filters -->
+        <div class="d-flex flex-wrap align-items-center gap-2 text-nowrap mt-n3 mb-3 mb-lg-4">
+          <button type="button" class="btn btn-sm btn-secondary rounded-pill me-1">
+            <i class="ci-close fs-sm me-1 ms-n1"></i>
+            Living room
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary rounded-pill me-1">
+            <i class="ci-close fs-sm me-1 ms-n1"></i>
+            Bedroom
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary rounded-pill me-1">
+            <i class="ci-close fs-sm me-1 ms-n1"></i>
+            Lighting
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary rounded-pill me-1">
+            <i class="ci-close fs-sm me-1 ms-n1"></i>
+            Accessories
+          </button>
+          <div class="nav ps-1">
+            <a class="nav-link fs-xs text-decoration-underline px-0" href="#!">Clear all</a>
+          </div>
+        </div>
+
+
+        <!-- Product grid -->
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gy-5" id="productGrid">
+
+          <!-- Item -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+   <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+
+
+          <!-- Item -->
+  <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+   <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+
+          <!-- Item -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+
+          <!-- Item -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+
+          <!-- Item -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+   <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+
+          <!-- Item (sale) -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+   <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+          <!-- Item -->
+ <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+     <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+          <!-- Item -->
+ <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+          <!-- Item (new) -->
+     <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+          <!-- Item -->
+  <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+          <!-- Item -->
+<div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+     <a class="cart-btn" href="cart-cart.html"></a> <button type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button></a>
+     <a class="wish-btn" href="wishlist-wishlist.html"> <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+        <i class="ci-heart fs-base animate-target"></i>
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+          <!-- Item (out of stock) -->
+  <div class="col">
+  <div class="animate-underline mb-sm-2">
+
+    <!-- Product Image + Discount Badge -->
+    <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
+      <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
+        <span class="badge text-bg-danger">-13%</span>
+      </div>
+
+      <img src="assets/img/virgo/products/asin1.png" class="hover-effect-target opacity-100" alt="Product">
+      <img src="assets/img/virgo/products/asin2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
+    </a>
+
+    <!-- Color Options -->
+    <div class="d-flex gap-2 mb-3">
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-1" checked>
+      <label for="color-6-1" class="btn btn-color fs-base" style="color: #f3e9d7">
+        <span class="visually-hidden">Vanilla</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-2">
+      <label for="color-6-2" class="btn btn-color fs-base" style="color: #e7b2a6">
+        <span class="visually-hidden">Blush</span>
+      </label>
+
+      <input type="radio" class="btn-check" name="colors-6" id="color-6-3">
+      <label for="color-6-3" class="btn btn-color fs-base" style="color: #ffffff">
+        <span class="visually-hidden">White</span>
+      </label>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="mb-2">
+      <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
+        <span class="animate-target">Premium Soy Candle – Warm Linen</span>
+      </a>
+    </h3>
+
+    <!-- Pricing -->
+    <div class="h6">₹699.00 <del class="fs-sm fw-normal text-body-tertiary">₹799.00</del></div>
+
+    <!-- Buttons -->
+   <div class="d-flex gap-2">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart" type="button" class="btn btn-dark w-100 rounded-pill px-3">Add to cart</button>
+                  <a href="wishlist.html">  <button type="button" class="btn btn-icon btn-secondary rounded-circle animate-pulse" aria-label="Add to wishlist">
+                      <i class="ci-heart fs-base animate-target"></i>
+                    </button></a>
+                  </div>
+
+  </div>
+</div>
+
+   
+      
+        </div>
+
+
+        <!-- Pagination -->
+    
+            <nav class="border-top mt-4 pt-3" aria-label="Catalog pagination">
+              <ul class="pagination pagination-lg pt-2 pt-md-3">
+                <li class="page-item disabled me-auto">
+                  <a class="page-link d-flex align-items-center h-100 fs-lg px-2" href="#!" aria-label="Previous page">
+                    <i class="ci-chevron-left mx-1"></i>
+                  </a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">
+                    1
+                    <span class="visually-hidden">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#!">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#!">3</a>
+                </li>
+                <li class="page-item">
+                  <span class="page-link pe-none">...</span>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#!">16</a>
+                </li>
+                <li class="page-item ms-auto">
+                  <a class="page-link d-flex align-items-center h-100 fs-lg px-2" href="#!" aria-label="Next page">
+                    <i class="ci-chevron-right mx-1"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+      </div>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer  class="footer bg-dark pb-4" data-bs-theme="dark">
+      <div class="container pb-md-3">
+
+   
+
+        <!-- Subscription + Links -->
+        <div class="py-5">
+          <div class="row ">
+
+            <!-- Subscription + Social buttons -->
+            <div class="col-lg-5 mb-4 mb-sm-5 mb-lg-0">
+             <img class="footer-logo" src="assets/img/logo/logo.webp" alt="">
+           <p class="text-white mt-1">Virgo creates handcrafted candles and elegant candle stands designed to bring warmth, aroma, and style into your home.</p>
+              <div class="d-flex gap-3">
+                <a  class="btn social-btn btn-icon btn-secondary  rounded-circle" href="#!" aria-label="Instagram">
+                  <i class="ci-instagram fs-base"></i>
+                </a>
+                <a class="btn btn-icon  social-btn btn-secondary  rounded-circle" href="#!" aria-label="Facebook">
+                  <i class="ci-facebook fs-base"></i>
+                </a>
+                <a class="btn btn-icon social-btn btn-secondary  rounded-circle" href="#!" aria-label="YouTube">
+                  <i class="ci-youtube fs-base"></i>
+                </a>
+                <a class="btn btn-icon social-btn btn-secondary  rounded-circle" href="#!" aria-label="Telegram">
+                  <i class="ci-telegram fs-base"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Columns with links that are turned into accordion on screens < 500px wide (sm breakpoint) -->
+     <div class="col-lg-7 text-black">
+  <div class="accordion ps-lg-4" id="footerLinks">
+    <div class="row">
+
+      <!-- Section 1: Main Menu -->
+      <div class="accordion-item col-sm-4 border-0 text-black">
+        <h6 class="accordion-header" id="mainMenuHeading">
+          <span class="d-none d-sm-block text-white">Quick Links</span>
+          <button type="button" class="accordion-button collapsed py-3 d-sm-none text-white" data-bs-toggle="collapse" data-bs-target="#mainMenuLinks" aria-expanded="false" aria-controls="mainMenuLinks">Quick Links</button>
+        </h6>
+        <div class="accordion-collapse collapse d-sm-block" id="mainMenuLinks" aria-labelledby="mainMenuHeading" data-bs-parent="#footerLinks">
+          <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0 text-black">
+            <li><a class="nav-link p-0 text-white" href="index.html">Home</a></li>
+            <li><a class="nav-link p-0 text-white" href="store.html">Store</a></li>
+            <li><a class="nav-link p-0 text-white" href="about.html">About Us</a></li>
+            <li><a class="nav-link p-0 text-white" href="blogs.html">Blogs</a></li>
+            <li><a class="nav-link p-0 text-white" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <hr class="d-sm-none my-0">
+      </div>
+
+      <!-- Section 2: Account -->
+      <div class="accordion-item col-sm-4 border-0 text-black">
+        <h6 class="accordion-header" id="accountHeading">
+          <span class="d-none d-sm-block text-white">Account</span>
+          <button type="button" class="accordion-button collapsed py-3 d-sm-none text-white" data-bs-toggle="collapse" data-bs-target="#accountLinks" aria-expanded="false" aria-controls="accountLinks">Account</button>
+        </h6>
+        <div class="accordion-collapse collapse d-sm-block" id="accountLinks" aria-labelledby="accountHeading" data-bs-parent="#footerLinks">
+          <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0 text-black">
+            <li><a class="nav-link p-0 text-white" href="account.html">My Account</a></li>
+            <li><a class="nav-link p-0 text-white" href="wishlist.html">Wishlist</a></li>
+            <li><a class="nav-link p-0 text-white" href="cart.html">Cart</a></li>
+            <li><a class="nav-link p-0 text-white" href="account.html">Orders</a></li>
+          </ul>
+        </div>
+        <hr class="d-sm-none my-0">
+      </div>
+
+      <!-- Section 3: Support -->
+      <div class="accordion-item col-sm-4 border-0 text-black">
+        <h6 class="accordion-header" id="supportHeading">
+          <span class="d-none d-sm-block text-white">Support</span>
+          <button type="button" class="accordion-button collapsed py-3 d-sm-none text-white" data-bs-toggle="collapse" data-bs-target="#supportLinks" aria-expanded="false" aria-controls="supportLinks">Support</button>
+        </h6>
+        <div class="accordion-collapse collapse d-sm-block" id="supportLinks" aria-labelledby="supportHeading" data-bs-parent="#footerLinks">
+          <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0 text-black">
+            <li><a class="nav-link p-0 text-white" href="terms-and-conditions.html">Terms & Conditions</a></li>
+            <li><a class="nav-link p-0 text-white" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="nav-link p-0 text-white" href="shipping-policy.html">Shipping Policy</a></li>
+              <li><a class="nav-link p-0 text-white" href="cancellation-policy.html">Cancellation Refund</a></li>
+          </ul>
+        </div>
+        <hr class="d-sm-none my-0">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+          </div>
+        </div>
+
+        <!-- Copyright -->
+    <p class="fs-xs  text-center text-white text-lg-start mb-0">
+  &copy; Copyright Virgo Creations. Developed by 
+  <span class="animate-underline">
+    <a class="animate-target text-white text-decoration-none" href="#!" target="_blank" rel="noreferrer">
+      Trivlogic Private Limited
+    </a>
+  </span>
+</p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="ci-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- Page specific scripts -->
+    <script>
+
+      // Dynamically update count number of selected items inside filter dropdown
+      window.onload = () => {
+        updateFilterCount('categoryCount')
+        updateFilterCount('categoryCount-2')
+      }
+
+      const updateFilterCount = (countId) => {
+        const checkedCheckboxes = document.querySelectorAll(`[data-count-id="${countId}"]:checked`)
+        const countElement = document.getElementById(countId)
+        if (checkedCheckboxes.length > 0) {
+            countElement.textContent = '(' + checkedCheckboxes.length + ')'
+        } else {
+            countElement.textContent = ''
+        }
+      }
+
+
+      // Switch between product and room view
+      const viewSwitcher = document.getElementById('viewShwitcher')
+      const productThumbs = Array.from(
+        document
+          .getElementById('productGrid')
+          .querySelectorAll('.hover-effect-opacity')
+      )
+
+      viewSwitcher.addEventListener('click', (e) => {
+        const target = e.target
+        if (target.classList.contains('nav-link')) {
+          viewSwitcher
+            .querySelectorAll('.nav-link.active')
+            .forEach((navLink) => navLink.classList.remove('active'))
+          target.classList.add('active')
+          const id = target.getAttribute('id')
+          productThumbs.forEach((thumb) => {
+            const images = thumb.querySelectorAll('img')
+            if (id === 'showRoom') {
+              images[0].classList.remove('opacity-100')
+              images[0].classList.add('opacity-0')
+              images[1].classList.remove('opacity-0')
+              images[1].classList.add('opacity-100')
+            } else if (id === 'showProduct') {
+              images[0].classList.remove('opacity-0')
+              images[0].classList.add('opacity-100')
+              images[1].classList.remove('opacity-100')
+              images[1].classList.add('opacity-0')
+            }
+          })
+        }
+      })
+    </script>
+  </body>
+
+<!-- Mirrored from coderthemes.com/cartzilla/shop-catalog-furniture.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Nov 2025 04:50:09 GMT -->
+</html>
