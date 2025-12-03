@@ -72,8 +72,8 @@
 
 
     <!-- Navigation bar (Page header) -->
-    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
-      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+    <header class="navbar-sticky sticky-top container rounded-pill z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap rounded-pill shadow ps-0 mx-1" style="background-color: rgba(26, 26, 26, 0.5); backdrop-filter: blur(5px);">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
@@ -93,17 +93,18 @@
           <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
             <ul class="navbar-nav position-relative">
               <li class="nav-item dropdown me-lg-n1 me-xl-0">
-                <a class="nav-link  fs-sm " aria-current="page" href="index.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+                               <a class="nav-link  fs-sm " aria-current="page" href="index.html" >Home</a>
            
               </li>
        <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
-  <a class="nav-link dropdown-toggle fs-sm" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Store</a>
+  <a class="nav-link dropdown-toggle fs-sm" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover focus" aria-expanded="false">Store</a>
 
-  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
-    <div class="d-flex flex-column flex-lg-row gap-4">
+  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem; position: fixed; left: 0; width: 100%; height: 80vh; z-index: 1025; box-sizing: border-box; padding-right: 0; overflow: hidden; top: 100%; margin-top: 5px; right: 0;">
+    <div class="d-flex gap-4" style="height: 100%; overflow: hidden;">
+      <div class="d-flex flex-wrap gap-4" style="flex-grow: 1; overflow-y: auto; overflow-x: hidden; justify-content: center;">
 
       <!-- Column 1 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Scented Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -131,8 +132,14 @@
         </ul>
       </div>
 
+
+
+
+  
+
+
       <!-- Column 2 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Jar Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -159,9 +166,10 @@
           </li>
         </ul>
       </div>
+   
 
       <!-- Column 3 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Candle Accessories</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -186,6 +194,14 @@
         </ul>
       </div>
 
+
+      
+
+      <!-- Image Poster Section -->
+      <div class="d-flex  justify-content-center" style="width: 300px; height: 100%; position: sticky; top: 0; overflow: hidden; flex-shrink: 0;">
+        <img src="assets/img/virgo/abt.jpg" alt="Candle Collection Poster" class="img-fluid rounded shadow-sm" style="max-height: 100%; width: 100%; object-fit: cover;">
+      </div>
+ 
     </div>
   </div>
 </li>
@@ -215,9 +231,18 @@
 
 
         
+     <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
 
+          <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex " href="wishlist.html">
+            <i class="ci-heart animate-target"></i>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
           <!-- Cart button -->
-          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+          <button type="button" class="btn btn-icon btn-icon-1 fs-lg btn-outline-secondary border-0 rounded-circle mt-1 animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
             <i class="ci-shopping-cart animate-target"></i>
           </button>
 

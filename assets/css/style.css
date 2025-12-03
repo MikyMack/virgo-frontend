@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  font-family: "Montserrat", sans-serif!important;
+}
+
 .navbar-logo{
     height: 50px;
     width: 50px;
@@ -5,6 +12,29 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+h1,h2,h3,h4,h5,h6,a,span,p,div,li,ul,button{
+  font-family: "Montserrat", sans-serif!important;
+
+
+}
+h2{
+  text-transform: uppercase;
+}
+.navbar-nav>.nav-item>.nav-link{
+  text-transform: uppercase;
+  color: white;
+}
+.btn-icon-1{
+  color: white!important;
+
+}
+.navbar-toggler-icon:before,.navbar-toggler-icon:after{
+  background-color: white!important;
+}
+.navbar-toggler-icon{ 
+  color: white!important;
+  background-color: white;
 }
 .navbar-brand {
     position: relative;
@@ -169,3 +199,29 @@ object-position: 50% 70%;
   letter-spacing: 2px;
   text-align: center;
 }
+         .category-card:hover .category-card-list {
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                        transform: translateY(0);
+                      }
+                      .category-card-list {
+                        transform: translateY(10px);
+                        transition: all 0.3s ease;
+                      }
+                           .certification-card {
+          border-radius: 0.75rem;
+          transition: transform 0.3s ease;
+        }
+        
+        .certification-card:hover {
+          transform: translateY(-5px);
+        }
+        
+        .hover-scale {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }

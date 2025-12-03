@@ -172,42 +172,51 @@
 
 
     <!-- Topbar -->
-    <div class="container position-relative d-flex justify-content-between z-1 py-3">
-      <div class="nav animate-underline">
-        <span class="text-secondary-emphasis fs-xs me-1">Contact us <span class="d-none d-sm-inline">24/7</span></span>
-        <a class="nav-link animate-target fs-xs fw-semibold p-0" href="tel:+15053753082">+91&nbsp;91&nbsp;0867&nbsp;35&nbsp;99</a>
-      </div>
-      <div class="sale-banner-slider d-none d-md-inline position-relative overflow-hidden" style="width: 240px;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🔥 The Biggest Sale Ever 50% Off</a>
+   <!-- Topbar -->
+    <div class="alert alert-dismissible bg-dark text-white rounded-0 py-2 px-0 m-0 fade show" data-bs-theme="dark">
+      <div class="container position-relative d-flex min-w-0">
+        <div class="d-flex flex-nowrap align-items-center g-2 w-100 min-w-0 mx-auto mt-n1" style="max-width: 458px">
+          <div class="nav me-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarPrev" aria-label="Prev">
+              <i class="ci-chevron-left"></i>
+            </button>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🎉 New Arrivals - Get 30% Off Today</a>
+          <div class="swiper fs-sm text-white" data-swiper='{
+            "spaceBetween": 24,
+            "loop": true,
+            "autoplay": {
+              "delay": 5000,
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#topbarPrev",
+              "nextEl": "#topbarNext"
+            }
+          }'>
+            <div class="swiper-wrapper min-w-0">
+              <div class="swiper-slide text-truncate text-center">🎉 Free Shipping on orders over $250. <span class="d-none d-sm-inline">Don't miss a discount!</span></div>
+              <div class="swiper-slide text-truncate text-center">💰 Money back guarantee. <span class="d-none d-sm-inline">We return money within 30 days.</span></div>
+              <div class="swiper-slide text-truncate text-center">💪 Friendly 24/7 customer support. <span class="d-none d-sm-inline">We've got you covered!</span></div>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">✨ Flash Sale - Limited Time Only</a>
+          <div class="nav ms-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarNext" aria-label="Next">
+              <i class="ci-chevron-right"></i>
+            </button>
           </div>
         </div>
+
       </div>
-      <ul class="nav gap-4">
-        <li class="animate-underline">
-          <a class="nav-link animate-target fs-xs p-0" href="wishlist.html">Wishlist</a>
-        </li>
-        <li class="animate-underline">
-          <a class="nav-link animate-target  fs-xs p-0" href="account.html">Account</a>
-        </li>
-      </ul>
     </div>
 
 
     <!-- Navigation bar (Page header) -->
-    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
-      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+    <header class="navbar-sticky sticky-top container rounded-pill z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap rounded-pill shadow ps-0 mx-1" style="background-color: rgba(26, 26, 26, 0.5); backdrop-filter: blur(5px);">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
-        <button type="button" class="navbar-toggler ms-3" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler  ms-3" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -223,17 +232,18 @@
           <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
             <ul class="navbar-nav position-relative">
               <li class="nav-item dropdown me-lg-n1 me-xl-0">
-                <a class="nav-link  fs-sm " aria-current="page" href="index.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+                               <a class="nav-link  fs-sm " aria-current="page" href="index.html" >Home</a>
            
               </li>
        <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
-  <a class="nav-link dropdown-toggle fs-sm active" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Store</a>
+  <a class="nav-link dropdown-toggle fs-sm active" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover focus" aria-expanded="false">Store</a>
 
-  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
-    <div class="d-flex flex-column flex-lg-row gap-4">
+  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem; position: fixed; left: 0; width: 100%; height: 80vh; z-index: 1025; box-sizing: border-box; padding-right: 0; overflow: hidden; top: 100%; margin-top: 5px; right: 0;">
+    <div class="d-flex gap-4" style="height: 100%; overflow: hidden;">
+      <div class="d-flex flex-wrap gap-4" style="flex-grow: 1; overflow-y: auto; overflow-x: hidden; justify-content: center;">
 
       <!-- Column 1 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Scented Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -261,8 +271,14 @@
         </ul>
       </div>
 
+
+
+
+  
+
+
       <!-- Column 2 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Jar Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -289,9 +305,10 @@
           </li>
         </ul>
       </div>
+   
 
       <!-- Column 3 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Candle Accessories</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -316,6 +333,14 @@
         </ul>
       </div>
 
+
+      
+
+      <!-- Image Poster Section -->
+      <div class="d-flex  justify-content-center" style="width: 300px; height: 100%; position: sticky; top: 0; overflow: hidden; flex-shrink: 0;">
+        <img src="assets/img/virgo/abt.jpg" alt="Candle Collection Poster" class="img-fluid rounded shadow-sm" style="max-height: 100%; width: 100%; object-fit: cover;">
+      </div>
+ 
     </div>
   </div>
 </li>
@@ -345,9 +370,18 @@
 
 
         
+     <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
 
+          <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex " href="wishlist.html">
+            <i class="ci-heart animate-target"></i>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
           <!-- Cart button -->
-          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+          <button type="button" class="btn btn-icon btn-icon-1 fs-lg btn-outline-secondary border-0 rounded-circle mt-1 animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
             <i class="ci-shopping-cart animate-target"></i>
           </button>
 
@@ -389,9 +423,18 @@
 
           <!-- Gallery -->
           <div class="col-md-7 col-xl-8 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0">
-            <div class="row row-cols-2 g-3 g-sm-4 g-md-3 g-lg-4">
+          <div class="d-none d-lg-block position-sticky" style="top: 100px; height: calc(100vh - 100px); overflow-y: auto; overflow-x: hidden;">
+            <div class="row row-cols-3 g-3 g-sm-4 g-md-3 g-lg-4">
               <div class="col">
-                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/01.png" data-glightbox data-gallery="product-gallery">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
+                  <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                  <div class="ratio ratio-1x1 hover-effect-target">
+                    <img src="assets/img/virgo/products/asin1.png" alt="Image">
+                  </div>
+                </a>
+              </div>
+                   <div class="col">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
                   <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
                   <div class="ratio ratio-1x1 hover-effect-target">
                     <img src="assets/img/virgo/products/asin1.png" alt="Image">
@@ -399,7 +442,7 @@
                 </a>
               </div>
               <div class="col">
-                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/02.jpg" data-glightbox data-gallery="product-gallery">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
                   <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
                   <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
                   <div class="ratio ratio-1x1 hover-effect-target">
@@ -409,7 +452,7 @@
               </div>
               <div class="col-12">
                 <div class="collapse d-md-block" id="morePictures">
-                  <div class="row row-cols-2 g-3 g-sm-4 g-md-3 g-lg-4 pb-3 pb-sm-4 pb-md-0">
+                  <div class="row row-cols-3 g-3 g-sm-4 g-md-3 g-lg-4 pb-3 pb-sm-4 pb-md-0">
                     <div class="col">
                       <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/03.jpg" data-glightbox data-gallery="product-gallery">
                         <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
@@ -437,8 +480,66 @@
                         </div>
                       </a>
                     </div>
+               
+                  </div>
+                </div>
+                <button type="button" class="btn btn-lg btn-outline-secondary w-100 collapsed d-md-none" data-bs-toggle="collapse" data-bs-target="#morePictures" data-label-collapsed="Show more pictures" data-label-expanded="Show less pictures" aria-expanded="false" aria-controls="morePictures" aria-label="Show / hide pictures">
+                  <i class="collapse-toggle-icon ci-chevron-down fs-lg ms-2 me-n2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="d-lg-none">
+            <div class="row row-cols-2 row-cols-sm-3 g-2 g-sm-3 g-md-2 g-lg-3">
+              <div class="col">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
+                  <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                  <div class="ratio ratio-1x1 hover-effect-target">
+                    <img src="assets/img/virgo/products/asin1.png" alt="Image">
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
+                  <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                  <div class="ratio ratio-1x1 hover-effect-target">
+                    <img src="assets/img/virgo/products/asin1.png" alt="Image">
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/virgo/products/asin1.png" data-glightbox data-gallery="product-gallery">
+                  <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
+                  <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                  <div class="ratio ratio-1x1 hover-effect-target">
+                    <img src="assets/img/virgo/products/asin2.png" alt="Image">
+                  </div>
+                </a>
+              </div>
+              <div class="col-12">
+                <div class="collapse d-md-block" id="morePictures">
+                  <div class="row row-cols-2 row-cols-sm-3 g-2 g-sm-3 g-md-2 g-lg-3 pb-3 pb-sm-4 pb-md-0">
                     <div class="col">
-                      <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/06.jpg" data-glightbox data-gallery="product-gallery">
+                      <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/03.jpg" data-glightbox data-gallery="product-gallery">
+                        <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
+                        <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                        <div class="ratio ratio-1x1 hover-effect-target">
+                          <img src="assets/img/virgo/products/asin3.png" alt="Image">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col">
+                      <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/04.jpg" data-glightbox data-gallery="product-gallery">
+                        <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
+                        <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
+                        <div class="ratio ratio-1x1 hover-effect-target">
+                          <img src="assets/img/virgo/products/asin1.png" alt="Image">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col">
+                      <a class="hover-effect-scale hover-effect-opacity position-relative d-flex rounded-4 overflow-hidden" href="assets/img/shop/furniture/product/05.jpg" data-glightbox data-gallery="product-gallery">
                         <span class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 opacity-0 z-1"></span>
                         <i class="ci-zoom-in hover-effect-target fs-3 text-white position-absolute top-50 start-50 translate-middle opacity-0 z-2"></i>
                         <div class="ratio ratio-1x1 hover-effect-target">
@@ -458,9 +559,7 @@
 
           <!-- Product details and options -->
    <div class="col-md-5 col-xl-4">
-  <div class="d-none d-md-block" style="margin-top: -90px"></div>
-  <div class="sticky-md-top ps-md-2 ps-xl-4">
-    <div class="d-none d-md-block" style="padding-top: 90px"></div>
+  <div class="ps-md-2 ps-xl-4">
 
     <!-- Product Code -->
     <div class="fs-xs text-body-secondary mb-3">VIRGO-CND-024</div>
@@ -475,10 +574,15 @@
 
     <!-- Highlights -->
     <ul class="list-unstyled fs-sm text-body-emphasis mb-4">
-      <li>
-        <span class="me-1">Pay in 4 interest-free payments of with Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolorum animi saepe dolorem minima? Ratione, quas sunt? Quos atque molestias reiciendis temporibus voluptatem, at deserunt, asperiores voluptates, sed iure beatae.</span>
-
-      </li>
+    <!-- Product Specifications -->
+    <ul class="list-unstyled ">
+      <li class="mt-1"><span class="h6 mb-0">Burn Time:</span> 30–35 hours</li>
+      <li class="mt-1"><span class="h6 mb-0">Wax Type:</span> 100% Soy Wax</li>
+      <li class="mt-1"><span class="h6 mb-0">Wick Type:</span> Lead-free Cotton Wick</li>
+      <li class="mt-1"><span class="h6 mb-0">Fragrance:</span> Vanilla Silk (Essential-oil infused)</li>
+      <li class="mt-1"><span class="h6 mb-0">Jar Material:</span> Reusable Glass Jar</li>
+      <li class="mt-1"><span class="h6 mb-0">Weight:</span> 150g (Approx.)</li>
+    </ul>
 
     </ul>
 
@@ -506,8 +610,6 @@
       </div>
     </div>
 
-
-
     <!-- Buttons -->
     <div class="d-flex gap-3 pb-4 mb-2 mb-lg-3">
       <button type="button" class="btn btn-lg btn-dark w-100 rounded-pill">Add to cart</button>
@@ -515,6 +617,146 @@
         <i class="ci-heart fs-lg animate-target"></i>
       </button>
     </div>
+
+<section class="row pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5">
+  <div class="col-md-12 col-xl-12 mb-xxl-3">
+
+
+
+
+
+    <!-- Accordion -->
+<div class="accordion accordion-alt-icon" id="productAccordion">
+
+  <!-- Product Info -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingProductInfo">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#productInfo"
+              aria-expanded="false" aria-controls="productInfo">
+        <span class="animate-target me-2">Product info</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="productInfo"
+         aria-labelledby="headingProductInfo" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        Discover the art of slow, mindful living with our Virgo handcrafted soy candles. 
+        Each candle is hand-poured in small batches to ensure exceptional quality, 
+        clean burn, and long-lasting aroma. Made using toxin-free soy wax and premium 
+        fragrance oils, Virgo candles create a warm, cozy, and safe environment for your home.
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingProductFeatures">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#productFeatures"
+              aria-expanded="false" aria-controls="productFeatures">
+        <span class="animate-target me-2">Features</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="productFeatures"
+         aria-labelledby="headingProductFeatures" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        <ul class="m-0">
+          <li><span class="text-body-emphasis fw-semibold">Clean & toxin-free burn:</span> Made with 100% soy wax for a soot-free, eco-friendly experience.</li>
+          <li><span class="text-body-emphasis fw-semibold">Long-lasting fragrance:</span> Essential-oil infused aromas that gently fill your space.</li>
+          <li><span class="text-body-emphasis fw-semibold">Hand-poured craftsmanship:</span> Produced in small batches for consistent quality.</li>
+          <li><span class="text-body-emphasis fw-semibold">Elegant frosted jar:</span> Designed to complement home décor and create warm ambience.</li>
+          <li><span class="text-body-emphasis fw-semibold">Lead-free cotton wick:</span> Ensures safe, even, and smoke-free burning.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Collection -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingCollection">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#collectionInfo"
+              aria-expanded="false" aria-controls="collectionInfo">
+        <span class="animate-target me-2">About Collection</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="collectionInfo"
+         aria-labelledby="headingCollection" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        Virgo’s Shot Glass Collection brings elegance in a compact form. Each candle is hand-poured 
+        into a frosted glass jar that gives off a soft, warm glow—perfect for enhancing any space. 
+        Ideal for gifting, décor styling, hampers, celebrations, or everyday ambience. Crafted with 
+        premium soy wax and lead-free wicks, these candles offer a clean and long-lasting burn.
+      </div>
+    </div>
+  </div>
+
+  <!-- About Fragrance -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingFragrance">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#fragranceInfo"
+              aria-expanded="false" aria-controls="fragranceInfo">
+        <span class="animate-target me-2">About Fragrance</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="fragranceInfo"
+         aria-labelledby="headingFragrance" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        A bright, refreshing scent inspired by fresh floral streams. This fragrance blends citrus, mint, 
+        floral, and soft sweet notes to create an uplifting aroma — perfect for energizing your mornings 
+        or elevating your mood throughout the day.
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingNotes">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#notesInfo"
+              aria-expanded="false" aria-controls="notesInfo">
+        <span class="animate-target me-2">Fragrance Notes</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="notesInfo"
+         aria-labelledby="headingNotes" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        <strong>Top Notes:</strong> Green, Citrus, Mint, Fresh, Lily, Spicy <br>
+        <strong>Heart Notes:</strong> Fruity, Melon, Sweet Floral, Jasmine, Violet <br>
+        <strong>Base Notes:</strong> Balsamic, Woody, Oriental, Cedarwood, Musk, Ocean, Vanilla
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Instructions to Use -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingInstructions">
+      <button type="button" class="accordion-button animate-underline fs-xl collapsed"
+              data-bs-toggle="collapse" data-bs-target="#instructionsInfo"
+              aria-expanded="false" aria-controls="instructionsInfo">
+        <span class="animate-target me-2">Instructions To Use</span>
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="instructionsInfo"
+         aria-labelledby="headingInstructions" data-bs-parent="#productAccordion">
+      <div class="accordion-body fs-base">
+        <ul class="m-0">
+          <li>Place the candle on a stable, flat surface while burning.</li>
+          <li>For the first burn, allow the wax to melt fully to the edges (3–4 hours) to avoid tunneling.</li>
+          <li>For subsequent burns, trim the wick slightly before lighting to prevent mushrooming.</li>
+          <li>Keep away from fans, wind, or combustible materials while burning.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
 
     <!-- Shipping Info -->
   
@@ -557,82 +799,7 @@
 
 
         <!-- Product description -->
-<section class="row pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5">
-  <div class="col-md-12 col-xl-12 mb-xxl-3">
 
-    <!-- Short Description -->
-    <p>
-      Our handcrafted soy candle is designed to elevate the atmosphere of any space with its warm glow 
-      and soothing fragrance. Made with 100% natural soy wax and premium essential-oil–based aromas, this 
-      candle delivers a clean, slow burn that fills your home with comfort and calm. Perfect for relaxation, 
-      décor, gifting, or everyday ambiance.
-    </p>
-
-    <!-- Product Specifications -->
-    <ul class="list-unstyled pb-md-2 pb-lg-3">
-      <li class="mt-1"><span class="h6 mb-0">Burn Time:</span> 30–35 hours</li>
-      <li class="mt-1"><span class="h6 mb-0">Wax Type:</span> 100% Soy Wax</li>
-      <li class="mt-1"><span class="h6 mb-0">Wick Type:</span> Lead-free Cotton Wick</li>
-      <li class="mt-1"><span class="h6 mb-0">Fragrance:</span> Vanilla Silk (Essential-oil infused)</li>
-      <li class="mt-1"><span class="h6 mb-0">Jar Material:</span> Reusable Glass Jar</li>
-      <li class="mt-1"><span class="h6 mb-0">Weight:</span> 150g (Approx.)</li>
-    </ul>
-
-    <!-- Accordion -->
-    <div class="accordion accordion-alt-icon" id="productAccordion">
-
-      <!-- Product Info -->
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="headingProductInfo">
-          <button type="button" class="accordion-button animate-underline fs-xl collapsed"
-                  data-bs-toggle="collapse" data-bs-target="#productInfo"
-                  aria-expanded="false" aria-controls="productInfo">
-            <span class="animate-target me-2">Product info</span>
-          </button>
-        </h3>
-        <div class="accordion-collapse collapse" id="productInfo"
-             aria-labelledby="headingProductInfo" data-bs-parent="#productAccordion">
-          <div class="accordion-body fs-base">
-            Discover the art of slow, mindful living with our Virgo handcrafted soy candles. Each candle 
-            is hand-poured in small batches to ensure exceptional quality, clean burn, and long-lasting aroma. 
-            Our blends use toxin-free soy wax and premium fragrance oils, creating a safe and cozy environment 
-            for your home. Whether you're unwinding after a long day or adding warmth to your décor, Virgo 
-            candles make every moment feel special.
-          </div>
-        </div>
-      </div>
-
-      <!-- Features -->
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="headingProductFeatures">
-          <button type="button" class="accordion-button animate-underline fs-xl collapsed"
-                  data-bs-toggle="collapse" data-bs-target="#productFeatures"
-                  aria-expanded="false" aria-controls="productFeatures">
-            <span class="animate-target me-2">Features</span>
-          </button>
-        </h3>
-        <div class="accordion-collapse collapse" id="productFeatures"
-             aria-labelledby="headingProductFeatures" data-bs-parent="#productAccordion">
-          <div class="accordion-body fs-base">
-            <ul class="m-0">
-              <li><span class="text-body-emphasis fw-semibold">Clean & toxin-free burn:</span> Made with 100% soy wax, ensuring a soot-free, eco-friendly burn.</li>
-              <li><span class="text-body-emphasis fw-semibold">Long-lasting fragrance:</span> Essential-oil infused aromas that gently fill your home without overpowering.</li>
-              <li><span class="text-body-emphasis fw-semibold">Hand-poured quality:</span> Each candle is carefully crafted in small batches for perfect texture and consistency.</li>
-              <li><span class="text-body-emphasis fw-semibold">Reusable glass jar:</span> Minimal, elegant, and sustainable—perfect for repurposing after use.</li>
-              <li><span class="text-body-emphasis fw-semibold">Lead-free cotton wick:</span> Safely designed to reduce smoke and ensure an even burn.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
- 
-
-   
-
-
-    </div>
-  </div>
-</section>
 
 
 

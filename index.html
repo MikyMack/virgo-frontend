@@ -41,6 +41,7 @@
     <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/hero-slider.css">
   </head>
 
 
@@ -153,38 +154,46 @@
 
 
     <!-- Topbar -->
-    <div class="container position-relative d-flex justify-content-between z-1 py-3">
-      <div class="nav animate-underline">
-        <span class="text-secondary-emphasis fs-xs me-1">Contact us <span class="d-none d-sm-inline">24/7</span></span>
-        <a class="nav-link animate-target fs-xs fw-semibold p-0" href="tel:+15053753082">+91&nbsp;91&nbsp;0867&nbsp;35&nbsp;99</a>
-      </div>
-      <div class="sale-banner-slider d-none d-md-inline position-relative overflow-hidden" style="width: 240px;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🔥 The Biggest Sale Ever 50% Off</a>
+    <div class="alert alert-dismissible bg-dark text-white rounded-0 py-2 px-0 m-0 fade show" data-bs-theme="dark">
+      <div class="container position-relative d-flex min-w-0">
+        <div class="d-flex flex-nowrap align-items-center g-2 w-100 min-w-0 mx-auto mt-n1" style="max-width: 458px">
+          <div class="nav me-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarPrev" aria-label="Prev">
+              <i class="ci-chevron-left"></i>
+            </button>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🎉 New Arrivals - Get 30% Off Today</a>
+          <div class="swiper fs-sm text-white" data-swiper='{
+            "spaceBetween": 24,
+            "loop": true,
+            "autoplay": {
+              "delay": 5000,
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#topbarPrev",
+              "nextEl": "#topbarNext"
+            }
+          }'>
+            <div class="swiper-wrapper min-w-0">
+              <div class="swiper-slide text-truncate text-center">🎉 Free Shipping on orders over $250. <span class="d-none d-sm-inline">Don't miss a discount!</span></div>
+              <div class="swiper-slide text-truncate text-center">💰 Money back guarantee. <span class="d-none d-sm-inline">We return money within 30 days.</span></div>
+              <div class="swiper-slide text-truncate text-center">💪 Friendly 24/7 customer support. <span class="d-none d-sm-inline">We've got you covered!</span></div>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">✨ Flash Sale - Limited Time Only</a>
+          <div class="nav ms-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarNext" aria-label="Next">
+              <i class="ci-chevron-right"></i>
+            </button>
           </div>
         </div>
+
       </div>
-      <ul class="nav gap-4">
-        <li class="animate-underline">
-          <a class="nav-link animate-target fs-xs p-0" href="wishlist.html">Wishlist</a>
-        </li>
-        <li class="animate-underline">
-          <a class="nav-link animate-target  fs-xs p-0" href="account.html">Account</a>
-        </li>
-      </ul>
     </div>
 
 
     <!-- Navigation bar (Page header) -->
-    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
-      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+    <header class="navbar-sticky sticky-top container rounded-pill z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap rounded-pill shadow ps-0 mx-1" style="background-color: rgba(26, 26, 26, 0.5); backdrop-filter: blur(5px);">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
@@ -204,17 +213,18 @@
           <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
             <ul class="navbar-nav position-relative">
               <li class="nav-item dropdown me-lg-n1 me-xl-0">
-                <a class="nav-link  fs-sm active" aria-current="page" href="index.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+                               <a class="nav-link  fs-sm active" aria-current="page" href="index.html" >Home</a>
            
               </li>
        <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
-  <a class="nav-link dropdown-toggle fs-sm" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Store</a>
+  <a class="nav-link dropdown-toggle fs-sm" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover focus" aria-expanded="false">Store</a>
 
-  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
-    <div class="d-flex flex-column flex-lg-row gap-4">
+  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem; position: fixed; left: 0; width: 100%; height: 80vh; z-index: 1025; box-sizing: border-box; padding-right: 0; overflow: hidden; top: 100%; margin-top: 5px; right: 0;">
+    <div class="d-flex gap-4" style="height: 100%; overflow: hidden;">
+      <div class="d-flex flex-wrap gap-4" style="flex-grow: 1; overflow-y: auto; overflow-x: hidden; justify-content: center;">
 
       <!-- Column 1 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Scented Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -242,8 +252,14 @@
         </ul>
       </div>
 
+
+
+
+  
+
+
       <!-- Column 2 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Jar Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -270,9 +286,10 @@
           </li>
         </ul>
       </div>
+   
 
       <!-- Column 3 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Candle Accessories</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -297,6 +314,14 @@
         </ul>
       </div>
 
+
+      
+
+      <!-- Image Poster Section -->
+      <div class="d-flex  justify-content-center" style="width: 300px; height: 100%; position: sticky; top: 0; overflow: hidden; flex-shrink: 0;">
+        <img src="assets/img/virgo/abt.jpg" alt="Candle Collection Poster" class="img-fluid rounded shadow-sm" style="max-height: 100%; width: 100%; object-fit: cover;">
+      </div>
+ 
     </div>
   </div>
 </li>
@@ -326,9 +351,18 @@
 
 
         
+     <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
 
+          <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex " href="wishlist.html">
+            <i class="ci-heart animate-target"></i>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
           <!-- Cart button -->
-          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+          <button type="button" class="btn btn-icon btn-icon-1 fs-lg btn-outline-secondary border-0 rounded-circle mt-1 animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
             <i class="ci-shopping-cart animate-target"></i>
           </button>
 
@@ -354,207 +388,97 @@
     <!-- Page content -->
     <main class="content-wrapper">
 
-      <!-- Hero slider -->
-      <section class="bg-body-tertiary min-vh-100 d-flex align-items-center overflow-hidden" style="margin-top: -110px; padding-top: 110px">
-        <div class="container h-100 py-5 my-md-2 my-lg-3 my-xl-4 mb-xxl-5">
-          <h1 class="display-4 text-center mx-auto mb-4" style="max-width: 680px">Your One-Stop Shop for Modern Living</h1>
-          <div class="row align-items-center justify-content-center gx-3 gx-sm-4 mb-3 mb-sm-4">
+      <!-- Hero Banner Slider -->
+<section  class="position-relative" style="z-index: 99;margin-top: -4.3rem;">
+  <div class="swiper position-absolute top-0 start-0 w-100 h-100" data-swiper='{
+    "effect": "fade",
+    "loop": true,
+    "speed": 400,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "autoplay": {
+      "delay": 5500,
+      "disableOnInteraction": false
+    }
+  }' data-bs-theme="dark">
 
-            <!-- Prev slide preview (controlled slider) -->
-            <div class="col-lg-1 col-xl-2 d-none d-lg-flex justify-content-end">
-              <div class="position-relative user-select-none" style="width: 262px">
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-50 rounded-circle d-none-dark"></span>
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-white rounded-circle d-none-dark d-none d-block-dark" style="opacity: .05"></span>
-                <div class="swiper position-relative z-2 opacity-60 rounded-circle pe-none" id="thumbsPrev" data-swiper='{
-                  "allowTouchMove": false,
-                  "loop": true,
-                  "effect": "coverflow",
-                  "coverflowEffect": {
-                    "rotate": 0,
-                    "scale": 1.3,
-                    "depth": -200,
-                    "stretch": -100,
-                    "slideShadows": false
-                  }
-                }'>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-4.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-1.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-2.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-3.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="swiper-wrapper">
 
-            <!-- Prev button -->
-            <div class="col-auto col-sm-1 order-1 order-lg-2 d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-prev btn btn-lg btn-icon btn-outline-secondary rounded-circle animate-slide-start" aria-label="Prev">
-                <i class="ci-chevron-left fs-xl animate-target"></i>
-              </button>
-            </div>
-
-            <!-- Main slider -->
-            <div class="col-sm-10 col-lg-8 col-xl-6 order-3">
-              <div class="swiper user-select-none rounded-pill" data-swiper='{
-                "loop": true,
-                "grabCursor": true,
-                "speed": 600,
-                "controlSlider": ["#thumbsPrev", "#thumbsNext", "#captions"],
-                "effect": "coverflow",
-                "coverflowEffect": {
-                  "rotate": 0,
-                  "scale": 1.3,
-                  "depth": -200,
-                  "stretch": -100,
-                  "slideShadows": false
-                },
-                "navigation": {
-                  "prevEl": ".btn-prev",
-                  "nextEl": ".btn-next"
-                }
-              }'>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide" data-swiper-binded="#description1">
-                    <div class="ratio" style="--cz-aspect-ratio: calc(400 / 636 * 100%)">
-                      <img src="assets/img/virgo/banner-1.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div class="swiper-slide" data-swiper-binded="#description2">
-                    <div class="ratio" style="--cz-aspect-ratio: calc(400 / 636 * 100%)">
-                      <img src="assets/img/virgo/banner-2.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div class="swiper-slide" data-swiper-binded="#description3">
-                    <div class="ratio" style="--cz-aspect-ratio: calc(400 / 636 * 100%)">
-                      <img src="assets/img/virgo/banner-3.jpg" alt="Image">
-                    </div>
-                  </div>
-                  <div class="swiper-slide" data-swiper-binded="#description4">
-                    <div class="ratio" style="--cz-aspect-ratio: calc(400 / 636 * 100%)">
-                      <img src="assets/img/virgo/banner-4.jpg" alt="Image">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Next button -->
-            <div class="col-auto col-sm-1 order-2 order-sm-3 order-lg-4 d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-next btn btn-lg btn-icon btn-outline-secondary rounded-circle animate-slide-end" aria-label="Next">
-                <i class="ci-chevron-right fs-xl animate-target"></i>
-              </button>
-            </div>
-
-            <!-- Next slide preview (controlled slider) -->
-            <div class="col-lg-1 col-xl-2 order-lg-5 d-none d-lg-block">
-              <div class="position-relative user-select-none" style="width: 262px">
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-50 rounded-circle d-none-dark"></span>
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-white rounded-circle d-none-dark d-none d-block-dark" style="opacity: .05"></span>
-                <div class="swiper position-relative z-2 opacity-60 rounded-circle pe-none" id="thumbsNext" data-swiper='{
-                  "allowTouchMove": false,
-                  "loop": true,
-                  "effect": "coverflow",
-                  "coverflowEffect": {
-                    "rotate": 0,
-                    "scale": 1.3,
-                    "depth": -200,
-                    "stretch": -100,
-                    "slideShadows": false
-                  }
-                }'>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-2.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-3.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-4.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ratio ratio-1x1">
-                        <img src="assets/img/virgo/banner-1.jpg" alt="Thumbnail">
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <!-- Slide 1 — VIDEO -->
+      <div class="swiper-slide" style="background-color: #6dafca">
+        <div class="position-absolute d-flex align-items-center w-100 h-100 z-2">
+          <div class="container mt-lg-n4">
+            <div class="row">
+              <div class="col-9 col-sm-8 col-md-7 col-lg-6">
+                <p class="fs-sm text-white mb-lg-4">🕯️ Premium handcrafted candles</p>
+                <h2 class="display-4 pb-2 pb-md-3 pb-lg-4">Fill Your Home With Warm, Soothing Aromas</h2>
+                <a class="btn btn-lg btn-outline-light rounded-pill" href="shop-catalog-grocery.html">Shop Candles</a>
               </div>
             </div>
           </div>
-
-          <!-- Linked captions (controlled slider) -->
-  <div class="swiper" id="captions" data-swiper='{
-  "allowTouchMove": false,
-  "loop": true,
-  "effect": "fade"
-}'>
-  <div class="swiper-wrapper">
-
-    <div class="swiper-slide bg-body-tertiary text-center">
-      <h3 class="text-secondary-emphasis fs-base fw-normal mb-2">Lavender Scented Candle – Relaxing Aroma</h3>
-      <p class="h4 mb-4">₹499.00</p>
-      <a class="btn btn-lg btn-dark rounded-pill" href="product-details.html">
-        Shop now
-        <i class="ci-chevron-right fs-lg ms-2 me-n2"></i>
-      </a>
-    </div>
-
-    <div class="swiper-slide bg-body-tertiary text-center">
-      <h3 class="text-secondary-emphasis fs-base fw-normal mb-2">Vanilla Jar Candle – Long Lasting 60 hrs</h3>
-      <p class="h4 mb-4">₹699.00</p>
-      <a class="btn btn-lg btn-dark rounded-pill" href="product-details.html">
-        Shop now
-        <i class="ci-chevron-right fs-lg ms-2 me-n2"></i>
-      </a>
-    </div>
-
-    <div class="swiper-slide bg-body-tertiary text-center">
-      <h3 class="text-secondary-emphasis fs-base fw-normal mb-2">Rose Petal Candle – Romantic Floral Scent</h3>
-      <p class="h4 mb-4">₹549.00</p>
-      <a class="btn btn-lg btn-dark rounded-pill" href="product-details.html">
-        Shop now
-        <i class="ci-chevron-right fs-lg ms-2 me-n2"></i>
-      </a>
-    </div>
-
-    <div class="swiper-slide bg-body-tertiary text-center">
-      <h3 class="text-secondary-emphasis fs-base fw-normal mb-2">Cinnamon Spice Candle – Warm & Festive</h3>
-      <p class="h4 mb-4">₹599.00</p>
-      <a class="btn btn-lg btn-dark rounded-pill" href="product-details.html">
-        Shop now
-        <i class="ci-chevron-right fs-lg ms-2 me-n2"></i>
-      </a>
-    </div>
-
-  </div>
-</div>
-
         </div>
-      </section>
+
+        <!-- VIDEO BACKGROUND -->
+        <video autoplay muted loop playsinline 
+          class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" 
+          style="z-index: 1;">
+          <source src="assets/img/virgo/video/poster.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Slide 2 — IMAGE -->
+      <div class="swiper-slide" style="background-color: #5a7978">
+        <div class="position-absolute d-flex align-items-center w-100 h-100 z-2">
+          <div class="container mt-lg-n4">
+            <div class="row">
+              <div class="col-12 col-sm-10 col-md-7 col-lg-6">
+                <p class="fs-sm text-white mb-lg-4">✨ Natural scents crafted with care</p>
+                <h2 class="display-4 pb-2 pb-md-3 pb-lg-4">Discover Our Signature Candle Collection</h2>
+                <a class="btn btn-lg btn-outline-light rounded-pill" href="shop-catalog-grocery.html">Explore Collection</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/img/virgo/abt-banner-1.jpg"
+          class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rtl-flip"
+          alt="Image">
+      </div>
+
+      <!-- Slide 3 — IMAGE -->
+      <div class="swiper-slide" style="background-color: #f99c03">
+        <div class="position-absolute d-flex align-items-center w-100 h-100 z-2">
+          <div class="container mt-lg-n4">
+            <div class="row">
+              <div class="col-9 col-sm-8 col-md-7 col-lg-6">
+                <p class="fs-sm text-white mb-lg-4">🌿 Made with natural wax</p>
+                <h2 class="display-4 pb-2 pb-md-3 pb-lg-4">Create a Warm & Cozy Atmosphere</h2>
+                <a class="btn btn-lg btn-outline-light rounded-pill" href="shop-catalog-grocery.html">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/img/virgo/banner-5.jpg"
+          class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rtl-flip"
+          alt="Image">
+      </div>
+
+    </div>
+
+    <!-- Pagination Bullets -->
+    <div class="swiper-pagination pb-sm-2"></div>
+  </div>
+
+  <div class="d-md-none" style="height: 380px"></div>
+  <div class="d-none d-md-block d-lg-none" style="height: 420px"></div>
+  <div class="d-none d-lg-block d-xl-none" style="height: 500px"></div>
+  <div class="d-none d-xl-block d-xxl-none" style="height: 560px"></div>
+  <div class="d-none d-xxl-block" style="height: 624px"></div>
+</section>
+
 
 
       <!-- Categories -->
@@ -562,10 +486,10 @@
         <div class="position-relative pt-xxl-3">
           
           <!-- External slider prev/next buttons visible on screens > 500px wide (sm breakpoint) -->
-          <button type="button" class="category-prev btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-start position-absolute top-50 start-0 z-2 translate-middle mt-n5 d-none d-sm-inline-flex" aria-label="Prev">
+          <button type="button" class="category-prev btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-start position-absolute top-50 start-0 z-2 translate-middle-y d-none d-sm-inline-flex" aria-label="Prev">
             <i class="ci-chevron-left fs-lg animate-target"></i>
           </button>
-          <button type="button" class="category-next btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-end position-absolute top-50 start-100 z-2 translate-middle mt-n5 d-none d-sm-inline-flex" aria-label="Next">
+          <button type="button" class="category-next btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-end position-absolute top-50 end-0 z-2 translate-middle-y d-none d-sm-inline-flex" aria-label="Next">
             <i class="ci-chevron-right fs-lg animate-target"></i>
           </button>
 
@@ -597,11 +521,11 @@
                 "spaceBetween": 24
               },
               "1200": {
-                "slidesPerView": 5,
+                "slidesPerView": 6,
                 "spaceBetween": 24
               },
               "1400": {
-                "slidesPerView": 6,
+                "slidesPerView": 7,
                 "spaceBetween": 24
               }
             }
@@ -610,8 +534,9 @@
 
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+           
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -620,7 +545,7 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Bedroom</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
+                    <!-- <ul class="category-card-list nav w-100 flex-column gap-1 pt-3 mb-0 opacity-0 transition-all" style="position: absolute; bottom: 0; left: 0; right: 0; transform: translateY(10px); visibility: hidden; background: white; border-radius: 0.5rem; box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); padding: 1rem; z-index: 10;">
                       <li class="w-100">
                         <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
                           <span class="text-truncate">Beds and mattresses</span>
@@ -636,15 +561,16 @@
                           <span class="text-truncate">Pillowcases</span>
                         </a>
                       </li>
-                    </ul>
+                    </ul> -->
                   </div>
                 </div>
               </div>
 
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+            
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -653,31 +579,16 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Living room</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Bookcases and storage</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Coffee tables</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Cabinets</span>
-                        </a>
-                      </li>
-                    </ul>
+                 
                   </div>
                 </div>
               </div>
 
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+             
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -686,31 +597,16 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Bathroom</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Mirrors</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Bathroom rugs</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Bathrobes and slippers</span>
-                        </a>
-                      </li>
-                    </ul>
+             
                   </div>
                 </div>
               </div>
 
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+         
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -719,31 +615,47 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Decoration</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Flowerpots</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Glassware</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Home fragrance</span>
-                        </a>
-                      </li>
-                    </ul>
+               
                   </div>
                 </div>
               </div>
-
+     <div class="swiper-slide">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+              
+                    <a class="d-block text-decoration-none" href="store.html">
+                      <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
+                        <div class="ratio ratio-1x1">
+                          <img src="assets/img/virgo/products/b3.png" class="rounded-pill" alt="Image">
+                        </div>
+                      </div>
+                      <h3 class="category-card-title h6 text-truncate">Decoration</h3>
+                    </a>
+           
+                  </div>
+                </div>
+              </div>
+                   <div class="swiper-slide">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+             
+                    <a class="d-block text-decoration-none" href="store.html">
+                      <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
+                        <div class="ratio ratio-1x1">
+                          <img src="assets/img/virgo/products/b3.png" class="rounded-pill" alt="Image">
+                        </div>
+                      </div>
+                      <h3 class="category-card-title h6 text-truncate">Decoration</h3>
+                    </a>
+                
+                  </div>
+                </div>
+              </div>
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+               
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -752,31 +664,18 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Office</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Desks and bureaus</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Office chairs</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Filing cabinets</span>
-                        </a>
-                      </li>
-                    </ul>
+             
                   </div>
                 </div>
               </div>
 
               <!-- Category -->
               <div class="swiper-slide">
-                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto" style="min-width: 165px">
-                  <div class="category-card-body">
+                <div class="category-card w-100 text-center px-1 px-lg-2 px-xxl-3 mx-auto position-relative" style="min-width: 165px; max-height: 100%;">
+                  <div class="category-card-body d-flex flex-column h-100">
+                    <style>
+             
+                    </style>
                     <a class="d-block text-decoration-none" href="store.html">
                       <div class="bg-body-tertiary rounded-pill mb-3 mx-auto" style="max-width: 164px">
                         <div class="ratio ratio-1x1">
@@ -785,23 +684,7 @@
                       </div>
                       <h3 class="category-card-title h6 text-truncate">Kitchen</h3>
                     </a>
-                    <ul class="category-card-list nav w-100 flex-column gap-1 pt-3">
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Cupboards</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Chest of drawers</span>
-                        </a>
-                      </li>
-                      <li class="w-100">
-                        <a class="nav-link justify-content-center min-w-0 w-100 fw-normal hover-effect-underline p-0" href="store.html">
-                          <span class="text-truncate">Dining tables</span>
-                        </a>
-                      </li>
-                    </ul>
+           
                   </div>
                 </div>
               </div>
@@ -820,14 +703,133 @@
           </div>
         </div>
       </section>
+    <section class="container pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+<h2 class="h3 pb-3" style="text-transform: uppercase;">Exclusive Candle Offers & Collections</h2>
 
+
+  <!-- Grid -->
+  <div class="row g-4 g-sm-3 g-lg-4 mb-xxl-3">
+    <div class="col-sm-5 d-flex flex-column gap-4 gap-sm-3 gap-lg-4">
+
+      <!-- Card 1 -->
+      <div class="ratio image-card" style="--cz-aspect-ratio: calc(300 / 726 * 100%)">
+        <img src="assets/img/virgo/banner1.png" class="rounded-5" alt="Image">
+
+      
+      </div>
+
+
+      <!-- Card 2 -->
+        <div class="ratio image-card" style="--cz-aspect-ratio: calc(300 / 726 * 100%)">
+        <img src="assets/img/virgo/banner3.png" class="rounded-5" alt="Image">
+
+      
+      </div>
+    </div>
+
+    <div class="col-sm-7 d-flex flex-column gap-4 gap-sm-3 gap-lg-4">
+
+      <!-- Card 3 -->
+      <div class="ratio image-card" style="--cz-aspect-ratio: calc(520 / 846 * 100%)">
+        <img src="assets/img/virgo/banner-1.jpg" class="rounded-5" alt="Image">
+
+     
+      </div>
+
+      <!-- Card 4 -->
+  
+    </div>
+  </div>
+
+
+</section>
+
+      <!-- Certifications Section -->
+      <section class="container py-5 my-2 my-sm-3 mb-md-2 mt-lg-4 my-xl-5">
+        <div class="text-center mb-5">
+          <h2 class="h3 mb-3" style="text-transform: uppercase;">Feel Good With Virgo</h2>
+          <p class="text-muted fs-5">Our commitment to quality, sustainability, and ethical practices</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <!-- Vegan -->
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+            <div class="certification-card d-flex flex-column align-items-center p-3 h-100 transition-all hover-scale">
+              <div class="mb-3 position-relative" style="width: 80px; height: 80px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <img src="assets/img/virgo/icon-1.jpeg" alt="Vegan" class="img-fluid rounded-circle" style="max-width: 100%; max-height: 100%;">
+                </div>
+              </div>
+              <h5 class="h6 mb-2">Vegan</h5>
+        
+            </div>
+          </div>
+          
+          <!-- Cruelty-Free -->
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+            <div class="certification-card d-flex flex-column align-items-center p-3 h-100 transition-all hover-scale">
+              <div class="mb-3 position-relative" style="width: 80px; height: 80px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <img src="assets/img/virgo/icon-2.jpeg" alt="Cruelty-Free" class="img-fluid rounded-circle" style="max-width: 100%; max-height: 100%;">
+                </div>
+              </div>
+              <h5 class="h6 mb-2">Cruelty-Free</h5>
+          
+            </div>
+          </div>
+          
+          <!-- Premium Ingredients -->
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+            <div class="certification-card d-flex flex-column align-items-center p-3 h-100 transition-all hover-scale">
+              <div class="mb-3 position-relative" style="width: 80px; height: 80px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <img src="assets/img/virgo/icon-3.jpeg" alt="Premium Ingredients" class="img-fluid rounded-circle" style="max-width: 100%; max-height: 100%;">
+                </div>
+              </div>
+              <h5 class="h6 mb-2">Premium Ingredients</h5>
+      
+            </div>
+          </div>
+          
+          <!-- Certified -->
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+            <div class="certification-card d-flex flex-column align-items-center p-3 h-100 transition-all hover-scale">
+              <div class="mb-3 position-relative" style="width: 80px; height: 80px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <img src="assets/img/virgo/icon-4.jpeg" alt="Certified" class="img-fluid rounded-circle" style="max-width:100%; max-height: 100%;">
+                </div>
+              </div>
+              <h5 class="h6 mb-2">Certified</h5>
+     
+            </div>
+          </div>
+          
+          <!-- Made in India -->
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+            <div class="certification-card d-flex flex-column align-items-center p-3 h-100 transition-all hover-scale">
+              <div class="mb-3 position-relative" style="width: 80px; height: 80px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <img src="assets/img/virgo/icon-5.jpeg" alt="Made in India" class="img-fluid" style="max-width: 100%; border-radius: 50px; max-height: 100%;">
+                </div>
+              </div>
+              <h5 class="h6 mb-2">Made in India</h5>
+       
+            </div>
+          </div>
+        </div>
+        
+
+      </section>
+      
+   
 
       <!-- Popular products carousel -->
       <section class="container pb-5 mt-md-n2 mb-2 mb-sm-3 mb-md-4 mb-xl-5">
 
         <!-- Heading -->
         <div class="d-flex align-items-center justify-content-between border-bottom pb-3 pb-md-4">
-          <h2 class="h3 mb-0">Popular products</h2>
+          <h2 class="h3 mb-0">NEW ARRIVALS</h2>
+
           <div class="nav ms-3">
             <a class="nav-link animate-underline px-0 py-2" href="store.html">
               <span class="animate-target">View all</span>
@@ -870,7 +872,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <img  src="assets/img/virgo/products/b3.png" class="hover-effect-target home-product-img opacity-100" alt="Product">
                     <img src="assets/img/virgo/products/b3.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
                   </a>
@@ -889,7 +891,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Bed frame light gray 140x200 cm</span>
                     </a>
                   </h3>
@@ -906,7 +908,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <img src="assets/img/virgo/products/p1.png" class="hover-effect-target home-product-img opacity-100" alt="Product">
                     <img src="assets/img/virgo/products/p1.png" class="position-absolute home-product-img top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
                   </a>
@@ -921,7 +923,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Blue armchair with iron legs</span>
                     </a>
                   </h3>
@@ -938,7 +940,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <div class="position-absolute top-0 start-0 z-2 mt-2 mt-sm-3 ms-2 ms-sm-3">
                       <span class="badge text-bg-danger">-13%</span>
                     </div>
@@ -960,7 +962,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Loft-style lamp 120x80 cm</span>
                     </a>
                   </h3>
@@ -977,7 +979,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <img src="assets/img/virgo/products/jar1.png" class="hover-effect-target home-product-img opacity-100" alt="Product">
                     <img src="assets/img/virgo/products/jar2.png" class="position-absolute home-product-img top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
                   </a>
@@ -992,7 +994,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Armchair with wooden legs 60x100 cm</span>
                     </a>
                   </h3>
@@ -1009,7 +1011,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <img src="assets/img/virgo/products/p1.png" class="hover-effect-target home-product-img opacity-100" alt="Product">
                     <img src="assets/img/virgo/products/p2.png" class="position-absolute home-product-img top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
                   </a>
@@ -1032,7 +1034,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Decorative flowerpot with a plant</span>
                     </a>
                   </h3>
@@ -1049,7 +1051,7 @@
               <!-- Item -->
               <div class="swiper-slide">
                 <div class="animate-underline">
-                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="shop-product-furniture.html">
+                  <a class="hover-effect-opacity ratio ratio-1x1 d-block mb-3" href="product-details.html">
                     <img src="assets/img/virgo/products/b3.png" class="hover-effect-target opacity-100" alt="Product">
                     <img src="assets/img/virgo/products/b2.png" class="position-absolute top-0 start-0 hover-effect-target opacity-0 rounded-4" alt="Room">
                   </a>
@@ -1064,7 +1066,7 @@
                     </label>
                   </div>
                   <h3 class="mb-2">
-                    <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-furniture.html">
+                    <a class="d-block fs-sm fw-medium text-truncate" href="product-details.html">
                       <span class="animate-target">Chair with a cushion for the legs</span>
                     </a>
                   </h3>
@@ -1092,64 +1094,31 @@
         </div>
       </section>
 
-
+  <!-- Shop CTA with Image Background -->
+  <div class="position-relative mt-4 mt-md-5 overflow-hidden  " style="min-height: 400px;">
+    <img src="assets/img/virgo/hm-bnr-2.jpg" class="w-100 h-100 object-fit-cover position-absolute" alt="Shop Banner" style="top: 0; left: 0; z-index: 1;">
+    <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-80" style="z-index: 2;"></div>
+    <div class="position-relative text-center py-5 px-3 d-flex flex-column justify-content-center align-items-center" style="min-height: 400px; z-index: 3;">
+      <p class="fs-4 fw-medium mb-3 text-white">Discover our curated collection of premium gift options			
+			</p>
+      <p class="text-white text-opacity-90 mb-4">A refined collection of gifts curated to inspire meaningful moments.</p>
+      <a href="store.html" class="btn btn-lg btn-light rounded-pill px-5 py-3">
+        <span class="d-flex align-items-center justify-content-center">
+          <span>Shop Now</span>
+          <svg class="ms-2" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
       <!-- Gallery -->
-    <section class="container pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
-  <h2 class="h3 pb-3">Interior design and inspiration</h2>
 
-  <!-- Grid -->
-  <div class="row g-4 g-sm-3 g-lg-4 mb-xxl-3">
-    <div class="col-sm-5 d-flex flex-column gap-4 gap-sm-3 gap-lg-4">
-
-      <!-- Card 1 -->
-      <div class="ratio image-card" style="--cz-aspect-ratio: calc(300 / 726 * 100%)">
-        <img src="assets/img/virgo/banner1.png" class="rounded-5" alt="Image">
-
-      
-      </div>
-
-
-      <!-- Card 2 -->
-        <div class="ratio image-card" style="--cz-aspect-ratio: calc(300 / 726 * 100%)">
-        <img src="assets/img/virgo/banner3.png" class="rounded-5" alt="Image">
-
-      
-      </div>
-    </div>
-
-    <div class="col-sm-7 d-flex flex-column gap-4 gap-sm-3 gap-lg-4">
-
-      <!-- Card 3 -->
-      <div class="ratio image-card" style="--cz-aspect-ratio: calc(520 / 846 * 100%)">
-        <img src="assets/img/virgo/banner-1.jpg" class="rounded-5" alt="Image">
-
-     
-      </div>
-
-      <!-- Card 4 -->
-  
-    </div>
-  </div>
-
-  <!-- Shop CTA -->
-  <div class="text-center mt-4 mt-md-5 pt-4 pt-md-5">
-    <p class="fs-4 fw-medium mb-3">Discover our curated collection of premium home decor items</p>
-    <p class="text-muted mb-4">Transform your living space with our exclusive interior design pieces</p>
-    <a href="store.html" class="btn btn-lg btn-dark rounded-pill px-5 py-3">
-      <span class="d-flex align-items-center justify-content-center">
-        <span>Shop Now</span>
-        <svg class="ms-2" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-    </a>
-  </div>
-</section>
 
 
 
       <!-- Features -->
- <section class="container pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+ <section class="container pb-5 mb-sm-2 mb-md-3 mt-5 mb-lg-4 mb-xl-5">
   <div class="row row-cols-1 row-cols-md-3 gy-3 gy-sm-4 gx-2 gx-lg-4 mb-xxl-3">
     
     <!-- Card 1 -->
@@ -1186,6 +1155,94 @@
 </section>
 
 
+  <div class="position-relative mt-4 mt-md-5 overflow-hidden  " style="min-height: 400px;">
+    <img src="assets/img/virgo/hm-bnr-3.jpg" class="w-100 h-100 object-fit-cover position-absolute" alt="Shop Banner" style="top: 0; left: 0; z-index: 1;">
+    <div class="position-absolute top-0 start-0 w-100 h-100  bg-opacity-80" style="z-index: 2;"></div>
+    <div class="position-relative text-center py-5 px-3 d-flex flex-column justify-content-center align-items-center" style="min-height: 400px; z-index: 3;">
+      <p class="fs-4 fw-medium mb-3 text-white"> Religious & Festive collections
+Baby Shower <br>
+Holy Communion
+Wedding Set
+Christmas
+Baptism
+Valentine
+Diwali		
+
+			</p>
+      <p class="text-white text-opacity-90 mb-4">Celebrate every sacred and special moment with our curated religious and festive collections</p>
+      <a href="store.html" class="btn btn-lg btn-light rounded-pill px-5 py-3">
+        <span class="d-flex align-items-center justify-content-center">
+          <span>Shop Now</span>
+          <svg class="ms-2" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Contact Form Section -->
+<section class="p-5 py-5 my-2 my-sm-3 mb-md-2 mt-lg-4 my-xl-5">
+  <div class="row g-4 g-lg-5 align-items-center shadow-lg">
+    <!-- Form Column -->
+    <div class="col-lg-6 shadow-lg pb-2">
+      <div class="pe-lg-4">
+        <h2 class="h3 mb-4">Get In Touch With Us</h2>
+        <p class="text-muted mb-4">Have questions about our products or services? Fill out the form below and our team will get back to you shortly.</p>
+        
+        <form class="needs-validation" novalidate>
+          <!-- Name Field -->
+          <div class="mb-4">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            <div class="invalid-feedback">Please enter your name</div>
+          </div>
+          
+          <!-- Phone Field -->
+          <div class="mb-4">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            <div class="invalid-feedback">Please enter your phone number</div>
+          </div>
+          
+          <!-- Purpose Dropdown -->
+          <div class="mb-4">
+            <label for="purpose" class="form-label">Purpose</label>
+            <select class="form-select" id="purpose" required>
+              <option value="" selected disabled>Select your purpose</option>
+              <option value="wholesale">Wholesale Inquiry</option>
+              <option value="exporting">Exporting Inquiry</option>
+              <option value="gifting">Gifting Solutions</option>
+              <option value="custom">Custom Orders</option>
+              <option value="general">General Inquiry</option>
+            </select>
+            <div class="invalid-feedback">Please select a purpose</div>
+          </div>
+          
+          <!-- Message Field -->
+          <div class="mb-4">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Tell us more about your inquiry"></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-dark rounded-pill px-4 py-3">Submit Inquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Image Column -->
+    <div class="col-lg-6">
+      <div class="position-relative h-100 overflow-hidden rounded-4">
+        <img src="assets/img/virgo/banner-4.jpg" class="w-100 h-100 object-fit-cover" alt="Contact Us">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- Featured product with video -->
 <section class="bg-body-tertiary ">

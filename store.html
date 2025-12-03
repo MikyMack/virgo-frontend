@@ -514,38 +514,46 @@
 
 
     <!-- Topbar -->
-     <div class="container position-relative d-flex justify-content-between z-1 py-3">
-      <div class="nav animate-underline">
-        <span class="text-secondary-emphasis fs-xs me-1">Contact us <span class="d-none d-sm-inline">24/7</span></span>
-        <a class="nav-link animate-target fs-xs fw-semibold p-0" href="tel:+15053753082">+91&nbsp;91&nbsp;0867&nbsp;35&nbsp;99</a>
-      </div>
-      <div class="sale-banner-slider d-none d-md-inline position-relative overflow-hidden" style="width: 240px;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🔥 The Biggest Sale Ever 50% Off</a>
+    <div class="alert alert-dismissible bg-dark text-white rounded-0 py-2 px-0 m-0 fade show" data-bs-theme="dark">
+      <div class="container position-relative d-flex min-w-0">
+        <div class="d-flex flex-nowrap align-items-center g-2 w-100 min-w-0 mx-auto mt-n1" style="max-width: 458px">
+          <div class="nav me-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarPrev" aria-label="Prev">
+              <i class="ci-chevron-left"></i>
+            </button>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">🎉 New Arrivals - Get 30% Off Today</a>
+          <div class="swiper fs-sm text-white" data-swiper='{
+            "spaceBetween": 24,
+            "loop": true,
+            "autoplay": {
+              "delay": 5000,
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#topbarPrev",
+              "nextEl": "#topbarNext"
+            }
+          }'>
+            <div class="swiper-wrapper min-w-0">
+              <div class="swiper-slide text-truncate text-center">🎉 Free Shipping on orders over $250. <span class="d-none d-sm-inline">Don't miss a discount!</span></div>
+              <div class="swiper-slide text-truncate text-center">💰 Money back guarantee. <span class="d-none d-sm-inline">We return money within 30 days.</span></div>
+              <div class="swiper-slide text-truncate text-center">💪 Friendly 24/7 customer support. <span class="d-none d-sm-inline">We've got you covered!</span></div>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <a class="text-secondary-emphasis fs-xs text-decoration-none d-block text-center" href="#!">✨ Flash Sale - Limited Time Only</a>
+          <div class="nav ms-2">
+            <button type="button" class="nav-link fs-lg p-0" id="topbarNext" aria-label="Next">
+              <i class="ci-chevron-right"></i>
+            </button>
           </div>
         </div>
+
       </div>
-      <ul class="nav gap-4">
-        <li class="animate-underline">
-          <a class="nav-link animate-target fs-xs p-0" href="wishlist.html">Wishlist</a>
-        </li>
-        <li class="animate-underline">
-          <a class="nav-link animate-target  fs-xs p-0" href="account.html">Account</a>
-        </li>
-      </ul>
     </div>
 
 
     <!-- Navigation bar (Page header) -->
-    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
-      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+    <header class="navbar-sticky sticky-top container rounded-pill z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap rounded-pill shadow ps-0 mx-1" style="background-color: rgba(26, 26, 26, 0.5); backdrop-filter: blur(5px);">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
@@ -569,13 +577,14 @@
            
               </li>
        <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
-  <a class="nav-link dropdown-toggle fs-sm active" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Store</a>
+  <a class="nav-link dropdown-toggle fs-sm active" href="store.html" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover focus" aria-expanded="false">Store</a>
 
-  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
-    <div class="d-flex flex-column flex-lg-row gap-4">
+  <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem; position: fixed; left: 0; width: 100%; height: 80vh; z-index: 1025; box-sizing: border-box; padding-right: 0; overflow: hidden; top: 100%; margin-top: 5px; right: 0;">
+    <div class="d-flex gap-4" style="height: 100%; overflow: hidden;">
+      <div class="d-flex flex-wrap gap-4" style="flex-grow: 1; overflow-y: auto; overflow-x: hidden; justify-content: center;">
 
       <!-- Column 1 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Scented Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -603,8 +612,14 @@
         </ul>
       </div>
 
+
+
+
+  
+
+
       <!-- Column 2 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Jar Candles</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -631,9 +646,10 @@
           </li>
         </ul>
       </div>
+   
 
       <!-- Column 3 -->
-      <div style="min-width: 190px">
+      <div style="min-width: 190px; max-width: 250px; flex: 1;">
         <div class="h6 mb-2">Candle Accessories</div>
         <ul class="nav flex-column gap-2 mt-0">
           <li class="d-flex w-100 pt-1">
@@ -658,6 +674,14 @@
         </ul>
       </div>
 
+
+      
+
+      <!-- Image Poster Section -->
+      <div class="d-flex  justify-content-center" style="width: 300px; height: 100%; position: sticky; top: 0; overflow: hidden; flex-shrink: 0;">
+        <img src="assets/img/virgo/abt.jpg" alt="Candle Collection Poster" class="img-fluid rounded shadow-sm" style="max-height: 100%; width: 100%; object-fit: cover;">
+      </div>
+ 
     </div>
   </div>
 </li>
@@ -687,9 +711,18 @@
 
 
         
+     <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
 
+          <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-icon-1 btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex " href="wishlist.html">
+            <i class="ci-heart animate-target"></i>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
           <!-- Cart button -->
-          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+          <button type="button" class="btn btn-icon btn-icon-1 fs-lg btn-outline-secondary border-0 rounded-circle mt-1 animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
             <i class="ci-shopping-cart animate-target"></i>
           </button>
 
@@ -714,36 +747,55 @@
 
     <!-- Page content -->
     <main class="content-wrapper">
+      <section class="virgo-blog-banner-section " style="padding-bottom: 3rem; margin-top: -4.3rem;">
+  <div class="virgo-blog-banner-wrapper">
+    <img src="assets/img/virgo/store-bnr.jpg" alt="Virgo Blog Banner" class="virgo-blog-banner-image">
+
+    <h2 class="virgo-blog-banner-title">Store</h2>
+  </div>
+</section>
       <div class="container pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5">
 
         <!-- Breadcrumb -->
-        <nav class="position-relative pt-3 my-3 my-md-4" aria-label="breadcrumb" style="z-index: 1021">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home-index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Store</li>
-          </ol>
-        </nav>
 
-
-        <!-- Page title -->
-        <h1 class="h3 position-relative pb-sm-2 pb-md-3" style="z-index: 1021">Store</h1>
 
 
         <!-- Filters -->
-        <div class="sticky-top bg-body mb-3 mb-sm-4" style="margin-top: -4.5rem">
-          <div style="justify-content: end!important;" class="row align-items-center  pt-5">
-        
-
-            <!-- Product / room view switcher -->
-            <div class="col-12 col-sm-4 col-md-3">
-              <ul class="nav nav-underline flex-nowrap justify-content-end" id="viewShwitcher">
-                  <nav class="nav">
-                <a class="nav-link animate-underline  px-2" href="#shopFilters" data-bs-toggle="offcanvas" aria-controls="shopFilters">
-                  <i class="ci-filter me-1"></i>
-                  <span class="animate-target text-nowrap">All filters</span>
-                </a>
-              </nav>
+        <div class="sticky-top bg-body mb-3 mb-sm-4" style="margin-top: -2.5rem">
+          <div class="row align-items-center pt-3 pt-sm-4 pt-md-5">
+            
+            <!-- Left section (All filters) -->
+            <div class="col-6 col-md-4 col-lg-3">
+              <ul class="nav nav-underline flex-nowrap justify-content-start" id="viewShwitcher">
+                <nav class="nav">
+                  <a class="nav-link animate-underline px-2 px-sm-3" href="#shopFilters" data-bs-toggle="offcanvas" aria-controls="shopFilters">
+                    <i class="ci-filter me-1"></i>
+                    <span class="animate-target text-nowrap d-none d-sm-inline">All filters</span>
+                    <span class="animate-target text-nowrap d-sm-none">Filters</span>
+                  </a>
+                </nav>
               </ul>
+            </div>
+            
+            <!-- Right section (Sort by) -->
+            <div class="col-6 col-md-8 col-lg-9">
+                <div class="d-flex align-items-center justify-content-end">
+                <label class="form-label fw-semibold mb-0 me-2 me-sm-3 d-none d-sm-inline">Sort by:</label>
+                <div class="sort-dropdown" style="min-width: 150px; width: auto; max-width: 200px;">
+                  <select class="form-select form-select-sm border rounded-pill shadow-sm px-3 py-2" data-select='{
+                    "removeItemButton": false,
+                    "classNames": {
+                      "containerInner": ["form-select", "form-select-sm", "border", "rounded-pill", "shadow-sm", "px-3", "py-2"]
+                    }
+                  }'>
+                    <option value="Relevance">Relevance</option>
+                    <option value="Popularity">Popularity</option>
+                    <option value="Price: Low to High">Price: Low to High</option>
+                    <option value="Price: High to Low">Price: High to Low</option>
+                    <option value="Newest Arrivals">Newest Arrivals</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>
